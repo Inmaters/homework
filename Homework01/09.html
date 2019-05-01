@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+// var number = 2;
+//   function getDoubled(number){
+//     number = (number * number) * 2;
+//     function getDoubledTrippled() {
+//       return number * 3;
+//     };
+//     return getDoubledTrippled();
+//   };
+  
+//   console.log(getDoubled(number));
+
+  var user = {
+    number: 2
+  };
+  function getDoubled() {
+    user.number = (user.number * user.number) * 2;
+    function getDoubledTrippled() {
+      return user.number * 3;
+    };
+    return getDoubledTrippled();
+  };
+
+  console.log(getDoubled.call(user));
+  console.log(getDoubled.apply(user));
+  console.log(getDoubled.bind(user));
+	</script>
+	
+</body>
+</html>

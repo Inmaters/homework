@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+			
+
+function isPalindrome(str) {
+    var strLen = str.length,
+      strReverse = str.split('').reverse().join('');
+      if (strReverse == str) {
+      return 'yes';
+    } else {
+      return 'no';
+    }
+  }
+  var test = isPalindrome('OHO');
+        console.log(test);
+        document.write('isPalindrome result: ' + 'str - ' + test);
+  
+
+  
+	</script>
+	
+</body>
+</html>
