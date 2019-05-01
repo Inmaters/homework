@@ -26,12 +26,13 @@
     function getDoubledTrippled() {
       return user.number * 3;
     };
-    return getDoubledTrippled();
+    return alert(getDoubledTrippled());
   };
+  getDoubled.call(user, 'number');
+  getDoubled.apply(user, ['number']);
+  getDoubled.bind(user);
 
-  console.log(getDoubled.call(user));
-  console.log(getDoubled.apply(user));
-  console.log(getDoubled.bind(user));
+  
 	</script>
 	
 </body>
