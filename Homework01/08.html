@@ -5,21 +5,22 @@
 	<title>Document</title>
 </head>
 <body>
-  <script type="text/javascript">
-  
-
+<script type="text/javascript">
 
   var user = {
-    name: 'Max',
-    call: function getName() {
-      console.log(user.name);
-
-    }
+    name: 'Max'
   };
   
-		user.call();
+  var getName = function(){
+    return this.name;
+  }
+  
+  console.log(getName.call(user));
+  
 
-	</script>
-	
+  
+
+ 
+</script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function Car (model, year, color){
+		this.model = model;
+		this.year = year;
+		this.color = color;
+	};
+
+	Car.prototype.carInfo = function(){
+		return 'Модель: ' + this.model + '   Год выпуска: ' + this.year + '    Цвет: ' + this.color
+	}
+
+	var bmw = new Car ('bmw', 2017, 'black');
+	var audi = new Car('audi', 1995, 'red');
+
+	console.log(bmw.carInfo());
+	console.log(audi.carInfo());
+
+</script>
+</body>
+</html>

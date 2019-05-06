@@ -5,19 +5,26 @@
 	<title>Document</title>
 </head>
 <body>
-	<script type="text/javascript">
+<script type="text/javascript">
 			
-var counter = 0;
   function count(){
-    while (counter < 10) {
-    counter++;
-    alert(counter);
+      var counter = 1;
+      return function(){
+        return counter++;
+      };
   }
-};
-count();
+      
+  var counter1 = count();
+  alert(counter1());
+  alert(counter1());
+  alert(counter1());
+  alert(counter1());
+
+  var counter2 = count();
+  alert(counter2());
+  alert(counter2());
 
 
-</script>
-	
+</script>	
 </body>
 </html>

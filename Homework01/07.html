@@ -5,22 +5,20 @@
 	<title>Document</title>
 </head>
 <body>
-	<script type="text/javascript">
+<script type="text/javascript">
 
-function multiA(a){
-	return function(b){
-		return a * b;
+	function multiA(a){
+		return function(b){
+			return a * b;
+		}
 	}
-};
 
-var multi3 = multiA(3);
-var multi4 = multiA(4);
+	var multi3 = multiA(3);
+	var multi4 = multiA(4);
 
-console.log(multi3(4));
-console.log(multi4(3));
+	console.log(multi3(4));
+	console.log(multi4(3));
 
-
-	</script>
-	
+</script>
 </body>
 </html>

@@ -5,17 +5,17 @@
 	<title>Document</title>
 </head>
 <body>
-	<script type="text/javascript">
+<script type="text/javascript">
 			
-var a = 'а, б, в, г, д';
-var b = a.split(', ');
-function rev() {
-  b.reverse();
-  alert(b);
-};
-rev();
+	function reverse(a) {
+	var str = '', i;
+	for (i = a.length - 1; i >= 0; i--) {
+	str += a.charAt(i);
+		}
+		return str;
+	}
+	alert(reverse('а, б, в, г, д'));
 
-	</script>
-	
+</script>
 </body>
 </html>

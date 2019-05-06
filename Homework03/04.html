@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<meta charset=utf-8 />
+</head>
+<body>
+	
+	<button onclick='addChildrenTo()'>create element</button>
+	<div id="bl"></div>
+
+<script>
+
+	function addChildrenTo(block, count, type){
+		var block = document.querySelector('div');
+		var count = prompt('Input number');
+		var type = prompt('Input type');
+			for (var i = 0; i < count; i++) {
+				var el = document.createElement(type);
+				el.innerHTML = 'Vadim!';
+				block.appendChild(el);
+			}
+	}
+	
+</script>
+</body>
+</html>

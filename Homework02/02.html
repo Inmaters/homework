@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function Car (model, year, color){
+		this._model = model;
+		this._year = year;
+		this._color = color;
+	};
+
+	function Bmw (model, year, color){
+		Car.call(this, model, year, color);
+		console.log('Модель: ' + this._model + '   Год выпуска: ' + this._year + '    Цвет: ' + this._color);
+	}
+
+	function Audi(model, year, color) {
+		Car.call(this, model, year, color);
+		console.log('Модель: ' + this._model + '   Год выпуска: ' + this._year + '    Цвет: ' + this._color);
+	}
+
+	var bmw = new Bmw('bmw', 2017, 'black');
+	var audi = new Audi('audi', 1995, 'red');
+
+</script>
+</body>
+</html>

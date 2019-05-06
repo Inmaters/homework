@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	var transport = {
+			stop: null
+	};
+
+	var car = {
+		stop: true
+	};
+
+	car.__proto__ = transport;
+
+	console.log(car.stop); // true - свойство взято из объекта car;
+	delete car.stop;
+	console.log(car.stop); // null - свойство взято из объекта transport так как свойство stop в объекте car было удалено;
+	delete transport.stop;
+	console.log(car.stop); // undefined - так как свойство stop было удалено у обоих объектов.
+
+</script>
+</body>
+</html>

@@ -5,21 +5,20 @@
 	<title>Document</title>
 </head>
 <body>
-	<script type="text/javascript">
+<script type="text/javascript">
 			
-var array = [2, 5, 6, -7, 12, 15, 0, 3, -8, 9];
-var max = getMaxValue(array);
-    alert(max);
-      function getMaxValue(array) {
-        var max = array[0];
-          for (var i = 0; i < array.length; i++) { 
-          if (max < array[i]) max = array[i];
-          }
-      return max;
-    };
+  var array = [2, 5, 6, -7, 12, 15, 0, 3, -8, 9];
+  var max = getMaxValue(array);
+  alert(max);
+  
+  function getMaxValue(array){
+    var max = array[0];
+      for (var i = 0; i < array.length; i++) { 
+      if (max < array[i]) max = array[i];
+      }
+  return max;
+  };
 
-
-	</script>
-	
+</script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var car = {
+		gas: 0,
+		model: 'audi',
+		year: '2017',
+		km: '95000',
+		color: 'black',
+		engine: function (){
+			var x = confirm('Включить зажигание?');
+			this.start(x);
+			},
+		start: function (x){
+			if (x == true && this.gas > 0) {
+				alert(car.model + ', ' + car.year + ', ' + car.km + ', ' + car.color + '-  Поехали!!!!'),
+				this.end(x);
+			}
+			if (x == true && this.gas == 0){
+				alert('Нужно заправить автомобиль'),
+				this.gasoline();
+			}
+			if (x == false) {
+				alert('Включите вначале зажигание!'),
+				this.engine();
+			}
+		},
+		gasoline: function (){
+			this.gas = prompt('Сколько литров зальем?');
+			if (this.gas > 0){
+				this.engine();
+			}
+			if (this.gas == 0 || this.gas == ''){
+				alert('Бензина всеравно нет! Заправтесь!'),
+				this.gasoline();
+			}
+		},
+		end: function (x){
+			var z = confirm('Остановить автомобиль?');
+			if (z == true){
+				alert('Машинка остановилась')
+			}
+			if (z == true && x == false) {
+				alert('Зажигание и так выключено');
+			}
+		}
+	};
+
+	car.engine();
+	
+</script>
+	
+</body>
+</html>

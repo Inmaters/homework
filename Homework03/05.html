@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<meta charset=utf-8 />
+</head>
+<body>
+
+	<div id='block'>
+		Halahan Vadym
+	</div>
+
+<script>
+
+	var colors = ['red', 'blue', 'green', 'orange', 'cyan', 'violet', 'yellow'];
+	var	el = document.querySelector('div');
+	var	result = '';
+	var	randCol;
+	var	randCol2 = colors.length;
+	var	str = el.innerHTML;
+
+		function rand() {
+			return Math.floor(Math.random() * (colors.length - 1));
+		}
+		for (var i = 0; i < str.length; i++) {
+			rand1 = rand();
+			if (randCol === randCol2) {
+				while (randCol === randCol2) {
+					randCol = rand();
+				}
+			}
+			result += '<span style="color:' + colors[randCol] + '">' + str[i] + '</span>';
+			randCol2 = randCol;
+		}
+		el.innerHTML = result;
+
+
+	
+	// function randomColor() {
+	// 	var r = Math.floor(Math.random() * 256);
+	// 	var g = Math.floor(Math.random() * 256);
+	// 	var b = Math.floor(Math.random() * 256);
+	// 	return "rgb(" + r + "," + g + "," + b + ")";
+	// }
+	// var block = document.getElementById("block");
+	// var elem = document.createElement("span");
+	// elem.innerHTML = "Vadim";
+	// elem.style.color = randomColor();
+	// block.insertAdjacentElement("beforeBegin", elem);
+</script>
+</body>
+</html>

@@ -5,35 +5,25 @@
 	<title>Document</title>
 </head>
 <body>
-	<script type="text/javascript">
-
-// var number = 2;
-//   function getDoubled(number){
-//     number = (number * number) * 2;
-//     function getDoubledTrippled() {
-//       return number * 3;
-//     };
-//     return getDoubledTrippled();
-//   };
-  
-//   console.log(getDoubled(number));
+<script type="text/javascript">
 
   var user = {
     number: 2
   };
-  function getDoubled() {
-    user.number = (user.number * user.number) * 2;
-    function getDoubledTrippled() {
-      return user.number * 3;
-    };
-    return alert(getDoubledTrippled());
-  };
+
+  function getDoubled(){
+    this.number = (this.number * this.number) * 2;
+      function getDoubledTrippled() {
+        return user.number * 3;
+      }
+    return console.log(getDoubledTrippled());
+  }
+
   getDoubled.call(user, 'number');
   getDoubled.apply(user, ['number']);
-  getDoubled.bind(user);
+  getDoubled.bind(user, 'number');
 
   
-	</script>
-	
+</script>
 </body>
 </html>

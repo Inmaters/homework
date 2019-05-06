@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function City (name, population, country){
+		this.name = name;
+		this.population = population;
+		this.country = country;
+
+		function getPopulation (){
+			return City.population;
+		}
+		function getCityName() {
+			return City.name;
+		}
+		function addCitizen() {
+			return (City.population + 1);
+		}
+	};
+
+	var city = new City ('Kyiv', 55020, 'Ukraine');
+	
+</script>
+</body>
+</html>
