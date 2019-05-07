@@ -13,11 +13,11 @@
 <script>
 
 	var colors = ['red', 'blue', 'green', 'orange', 'cyan', 'violet', 'yellow'];
-	var	el = document.querySelector('div');
+	var el = document.querySelector('div');
 	var	result = '';
 	var	randCol;
 	var	randCol2 = colors.length;
-	var	str = el.innerHTML;
+	var str = el.innerHTML;
 
 	function rand() {
 		return Math.floor(Math.random() * (colors.length - 1));
@@ -27,10 +27,10 @@
 		if (randCol === randCol2) {
 			while (randCol === randCol2) {
 				randCol = rand();
-			}
 		}
-		result += '<span style="color:' + colors[randCol] + '">' + str[i] + '</span>';
-		randCol2 = randCol;
+	}
+	result += '<span style="color:' + colors[randCol] + '">' + str[i] + '</span>';
+	randCol2 = randCol;
 	}
 	el.innerHTML = result;
 
