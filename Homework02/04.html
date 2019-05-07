@@ -12,18 +12,23 @@
 		this.population = population;
 		this.country = country;
 
-		function getPopulation (){
-			return City.population;
+		this.getPopulation = function() {
+			return population;
 		}
-		function getCityName() {
-			return City.name;
+		this.getCityName = function() {
+			return name;
 		}
-		function addCitizen() {
-			return (City.population + 1);
+		this.addCitizen = function() {
+			return population = (population + 1);
 		}
 	};
 
 	var city = new City ('Kyiv', 55020, 'Ukraine');
+	
+	console.log(city);
+	city.getPopulation();
+	city.getCityName();
+	city.addCitizen();
 	
 </script>
 </body>

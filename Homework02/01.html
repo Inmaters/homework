@@ -13,40 +13,40 @@
 		year: '2017',
 		km: '95000',
 		color: 'black',
-		engine: function (){
+		engine: function () {
 			var x = confirm('Включить зажигание?');
 			this.start(x);
 			},
-		start: function (x){
-			if (x == true && this.gas > 0) {
-				alert(car.model + ', ' + car.year + ', ' + car.km + ', ' + car.color + '-  Поехали!!!!'),
+		start: function (x) {
+			if (x === true && this.gas > 0) {
+				alert(car.model + ', ' + car.year + ', ' + car.km + ', ' + car.color + '-  Поехали!!!!');
 				this.end(x);
 			}
-			if (x == true && this.gas == 0){
-				alert('Нужно заправить автомобиль'),
+			if (x === true && this.gas === 0) {
+				alert('Нужно заправить автомобиль');
 				this.gasoline();
 			}
-			if (x == false) {
-				alert('Включите вначале зажигание!'),
+			if (x === false) {
+				alert('Включите вначале зажигание!');
 				this.engine();
 			}
 		},
-		gasoline: function (){
+		gasoline: function () {
 			this.gas = prompt('Сколько литров зальем?');
-			if (this.gas > 0){
+			if (this.gas > 0) {
 				this.engine();
 			}
-			if (this.gas == 0 || this.gas == ''){
-				alert('Бензина всеравно нет! Заправтесь!'),
+			if (this.gas === 0 || this.gas === '') {
+				alert('Бензина всеравно нет! Заправтесь!');
 				this.gasoline();
 			}
 		},
-		end: function (x){
+		end: function (x) {
 			var z = confirm('Остановить автомобиль?');
-			if (z == true){
-				alert('Машинка остановилась')
+			if (z === true) {
+				alert('Машинка остановилась');
 			}
-			if (z == true && x == false) {
+			if (z === true && x === false) {
 				alert('Зажигание и так выключено');
 			}
 		}

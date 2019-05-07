@@ -7,24 +7,65 @@
 <body>
 <script type="text/javascript">
 
-	function Car (model, year, color){
-		this._model = model;
-		this._year = year;
-		this._color = color;
-	};
+	function Car(model, year, color, km, gas) {
+		this.model = model;
+		this.year = year;
+		this.color = color;
+		this.km = km;
+		this.gas = gas;
+	
+		var gasoline = this.gas;
+		this.engine = function() {
+			var x = confirm('Включить зажигание?');
+			this.start(x);
+		};
 
-	function Bmw (model, year, color){
-		Car.call(this, model, year, color);
-		console.log('Модель: ' + this._model + '   Год выпуска: ' + this._year + '    Цвет: ' + this._color);
+		this.start = function(x) {
+			if (x === true && this.gas > 0) {
+				alert(this.model + ', ' + this.year + ', ' + this.color + ', ' + this.km + ', ' + this.gas + '-  Поехали!!!!');
+				this.end(x);
+			}
+			if (x === true && this.gas === 0) {
+				alert('Нужно заправить автомобиль');
+				this.gasoline();
+			}
+			if (x === false) {
+				alert('Включите вначале зажигание!');
+				this.engine();
+			}
+		};
+	
+		this.gasoline = function() {
+			this.gas = prompt('Сколько литров зальем?');
+			if (this.gas > 0) {
+				this.engine();
+			}
+			if (this.gas === 0 || this.gas === '') {
+				alert('Бензина всеравно нет! Заправтесь!');
+				this.gasoline();
+			}
+		};
+	
+		this.end = function(x) {
+			var z = confirm('Остановить автомобиль?');
+			if (z === true) {
+				alert('Машинка остановилась');
+			}
+			if (z === true && x === false) {
+				alert('Зажигание и так выключено');
+			}
+		};
 	}
 
-	function Audi(model, year, color) {
-		Car.call(this, model, year, color);
-		console.log('Модель: ' + this._model + '   Год выпуска: ' + this._year + '    Цвет: ' + this._color);
-	}
+	var bmw = new Car('bmw', 2017, 'black', 15000, 5);
+	console.log(bmw);
+	console.log(bmw.engine());
+	
+	var audi = new Car('audi', 1995, 'red', 2000, 0);
+	console.log(audi);
+	console.log(audi.engine());
 
-	var bmw = new Bmw('bmw', 2017, 'black');
-	var audi = new Audi('audi', 1995, 'red');
+	
 
 </script>
 </body>

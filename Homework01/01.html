@@ -7,16 +7,18 @@
 <body>
 <script type="text/javascript">
 			
-	var a = prompt("Введите вряемя от 0 до 24. Скидка работает с 9 до 13");
-		if (a < 0 || a > 24){
-			console.log(+ a + ", " + "Вы ввели некорректное время!");
-		}
-		else if (a < 9 || a > 13){
-			console.log(+ a + ", " + "Cкидкa только с 9 до 13");
-		}
-		else {
-			console.log(+ a + ", " + "Ура! Cкидка!");
-		};
+	var start =+ prompt('Введите время начала действия скидки');
+	var end =+ prompt('Введите время конца действия скидки');
+	var timeNow =+ prompt('Введите теперешнее время');
+	if (start < 0 || start > 24) {
+		console.log('Вы ввели некорректное время');
+	}
+	if (end < start || end > 24) {
+		console.log('Вы ввели некорректное время');
+	}
+	if (timeNow < start || timeNow > end) {
+		console.log('Вы не попали под действия скидки');
+	} else { console.log('Ура!! Скидка');}
 
 </script>
 </body>
