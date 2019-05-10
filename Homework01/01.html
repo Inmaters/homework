@@ -12,14 +12,16 @@
 	var timeNow =+ prompt('Введите теперешнее время');
 	if (start < 0 || start > 24) {
 		console.log('Вы ввели некорректное время');
+	} else {	
+		if (timeNow >= start && timeNow < 24 || timeNow > 0 && timeNow < end) {
+			console.log('Ура!! Скидка');
+		} else {
+			if (timeNow < start || timeNow > end) {
+				console.log('Вы не попали под действия скидки');
+			}
+		}
 	}
-	if (end < start || end > 24) {
-		console.log('Вы ввели некорректное время');
-	}
-	if (timeNow < start || timeNow > end) {
-		console.log('Вы не попали под действия скидки');
-	} else { console.log('Ура!! Скидка');}
-
+	
 </script>
 </body>
 </html>
