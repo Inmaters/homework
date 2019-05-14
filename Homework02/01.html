@@ -21,7 +21,7 @@
 			if (x && this.gas > 0) {
 				alert(car.model + ', ' + car.year + ', ' + car.km + ', ' + car.color + '-  Поехали!!!!');
 				this.end(x);
-			} else if (x && this.gas === 0) {
+			} else if (x && !this.gas) {
 				alert('Нужно заправить автомобиль');
 				this.gasoline();
 			} else {
