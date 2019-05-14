@@ -7,21 +7,21 @@
 <body>
 <script type="text/javascript">
 
-	function City (name, population, country){
+	function City (name, population, country) {
 		this.name = name;
 		this.population = population;
 		this.country = country;
 
 		this.getPopulation = function() {
 			return population;
-		}
+		};
 		this.getCityName = function() {
 			return name;
-		}
+		};
 		this.addCitizen = function() {
 			return population = (population + 1);
 		}
-	};
+	}
 
 	var city = new City ('Kyiv', 55020, 'Ukraine');
 	
