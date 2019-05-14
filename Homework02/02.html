@@ -14,22 +14,20 @@
 		this.km = km;
 		this.gas = gas;
 	
-		var gasoline = this.gas;
 		this.engine = function() {
 			var x = confirm('Включить зажигание?');
 			this.start(x);
 		};
 
 		this.start = function(x) {
-			if (x === true && this.gas > 0) {
+			if (x && this.gas > 0) {
 				alert(this.model + ', ' + this.year + ', ' + this.color + ', ' + this.km + ', ' + this.gas + ',  Поехали!!!!');
 				this.end(x);
 			}
-			if (x === true && this.gas === 0) {
+			else if (x && this.gas === 0) {
 				alert('Нужно заправить автомобиль');
 				this.gasoline();
-			}
-			if (x === false) {
+			} else {
 				alert('Включите вначале зажигание!');
 				this.engine();
 			}
@@ -39,8 +37,7 @@
 			this.gas = prompt('Сколько литров зальем?');
 			if (this.gas > 0) {
 				this.engine();
-			}
-			if (this.gas === 0 || this.gas === '') {
+			} else {
 				alert('Бензина всеравно нет! Заправтесь!');
 				this.gasoline();
 			}
@@ -48,10 +45,9 @@
 	
 		this.end = function(x) {
 			var z = confirm('Остановить автомобиль?');
-			if (z === true) {
+			if (z) {
 				alert('Машинка остановилась');
-			}
-			if (z === true && x === false) {
+			} else {
 				alert('Зажигание и так выключено');
 			}
 		};
