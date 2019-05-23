@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  background: #F0BE2E;
+  border: 1px solid black;
+  float: left;
+}
+
+.menu {
+  height: 100px;
+  width: auto;
+  background: #F40F0F;
+  border: 1px solid black;	
+}
+
+.navigation {
+  background: #333333;
+  height: 450px;
+  width: calc(35% - 100px);
+  float: right;
+}
+
+.news_feed {
+  height: 300px;
+  width: 100px;
+  background: #AC4C4C;
+  border-right: 1px solid black;
+  float: left;
+}
+
+.list {
+  background: #F0BE2E;
+  height: 300px;
+  width: 65% ;
+  float: left;
+}
+
+.footer {
+  height: 150px;
+  background: #F0BE2E;
+  clear: left;
+  border: 1px solid black;
+}
