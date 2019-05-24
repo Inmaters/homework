@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+}
+
+input {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 100px;
+}
+
+@mixin circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid yellow;
+    background: transparent;
+}
+
+label {
+    height: auto;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    display: inline-grid;
+    grid-template-columns: repeat(12, 50px);
+  	grid-template-rows: repeat(5, 50px);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    
+    background-color: #080808;
+}
+
+input:checked + label .square {
+    @include circle;
+}
+
+.square {
+    background-color: black;
+    transition: 3s;
+}
+
+.square:hover {
+    background-color: yellow;
+    transition: 1s easy;
+}
+
