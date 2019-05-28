@@ -1,0 +1,15 @@
+@mixin for_square {
+    width: 85px;
+    height: 85px;
+    border: 5px solid black;
+    position: absolute;
+    left: 0;
+    top: 0;  
+}
+
+@mixin for_circle {   
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}

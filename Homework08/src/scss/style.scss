@@ -1,0 +1,133 @@
+@import 'mixins.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .firstElement {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        top: 80px;
+        left: -50px;
+        animation: firstElement 4s linear infinite;
+        :nth-child(1) {
+            animation: square1 4s linear infinite;
+            @include for_square;
+        } 
+        :nth-child(2) {
+            animation: square2 4s linear infinite;
+            @include for_square;
+        } 
+        :nth-child(3) {
+            animation: square3 4s linear infinite;
+            @include for_square;
+        } 
+        :nth-child(4) {
+            animation: square4 4s linear infinite;
+            @include for_square;
+        } 
+    }
+    .secondElement {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        top: 250px;
+        left: -100px;
+        :nth-child(1) {
+            background-color: #0f60e2;
+            top: 0;
+            left: 0;
+            animation: circle1 8s ease infinite;
+            @include for_circle;
+        } 
+        :nth-child(2) {
+            background-color: #bc0d36;
+            top: 0;
+            left: 100px;
+            animation: circle2 8s ease infinite;
+            @include for_circle;
+        } 
+        :nth-child(3) {
+            background-color: #fcf419;
+            top: 100px;
+            left: 100px;
+            animation: circle3 8s ease infinite;
+            @include for_circle;
+        } 
+        :nth-child(4) {
+            background-color: #D3D1D2;
+            top: 100px;
+            left: 0px;
+            animation: circle4 8s ease infinite;
+            @include for_circle;
+        } 
+    }
+}
+
+@keyframes firstElement {
+    25% { transform: rotate(-45deg)}
+    50% {transform:rotate(-90deg)}
+    75% { transform: rotate(-180deg)}
+    100% {transform: rotate(-270deg)}
+}
+
+@keyframes square1 {
+    0% {transform:translate(0);}
+    50% {transform:translate(-85px, 0); border-color: #2625D1;}
+    100% {transform:translate(0);}
+}
+
+@keyframes square2 {
+    0% {transform:translate(0);}
+    50% {transform:translate(85px, 0); border-color: #CB2813;}
+    100% {transform:translate(0);}
+}
+
+@keyframes square3 {
+    0% {transform:translate(0);}
+    50% {transform:translate(0, 85px); border-color: #F6FA6E;}
+    100% {transform:translate(0);}
+}
+
+@keyframes square4 {
+    0% {transform:translate(0);}
+    50% {transform:translate(0, -85px); border-color:#EBBAC9;}
+    100% {transform:translate(0);}
+}
+
+@keyframes circle1 {
+    0% {transform: translate(0, 0); border-radius: 50%;}
+    25% {transform: translate(100px, 0) scale(0.5); border-radius: 0%;}
+    50% {transform: translate(100px, 100px); border-radius: 50%;}
+    75% {transform: translate(0, 100px) scale(0.5); border-radius: 0%;}
+    100% {transform: translate(0, 0); border-radius: 50%;}
+  }
+
+@keyframes circle2 {
+    0% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+    25% {transform: translate(0, 100px); border-radius: 50%;}
+    50% {transform: translate(-100px, 100px) scale(0.5); border-radius: 0%;}
+    75% {transform: translate(-100px, 0); border-radius: 50%;}
+    100% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+}
+
+@keyframes circle3 {
+    0% {transform: translate(0, 0); border-radius: 50%;}
+    25% {transform: translate(-100px, 0) scale(0.5); border-radius: 0%;}
+    50% {transform: translate(-100px, -100px); border-radius: 50%;}
+    75% {transform: translate(0, -100px) scale(0.5); border-radius: 0%;}
+    100% {transform: translate(0, 0); border-radius: 50%;}
+}
+
+@keyframes circle4 {
+    0% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+    25% {transform: translate(0, -100px); border-radius: 50%;}
+    50% {transform: translate(100px, -100px) scale(0.5); border-radius: 0%;}
+    75% {transform: translate(100px, 0); border-radius: 50%;}
+    100% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+}
