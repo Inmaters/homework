@@ -5,11 +5,25 @@
   border-collapse: collapse;
 }
 
+p {	
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+}
+
+.white_col {
+	color: white;
+}
+
 .logo {
   height: 100px;
   width: 100px;
   background: #F0BE2E;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
   float: left;
 }
 
@@ -17,14 +31,17 @@
   height: 100px;
   width: auto;
   background: #F40F0F;
-  border: 1px solid black;	
+  border-bottom: 1px solid black;	
+  margin-left: 100px;
 }
 
 .navigation {
   background: #333333;
   height: 450px;
-  width: calc(35% - 100px);
+  width: calc(100% - 65%);
   float: right;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .news_feed {
@@ -38,7 +55,7 @@
 .list {
   background: #F0BE2E;
   height: 300px;
-  width: 65% ;
+  width: calc(100% - 100px - 35%);
   float: left;
 }
 
@@ -46,5 +63,7 @@
   height: 150px;
   background: #F0BE2E;
   clear: left;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  width: calc(100% - 35% + 100px);
 }

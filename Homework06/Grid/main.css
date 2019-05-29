@@ -9,7 +9,7 @@ div {
 	border: 1px solid black;
 }
 
-.all{
+.all {
 	display: grid;
 	grid-template-columns: 100px 65% 35%;
 	grid-template-rows: 100px 300px 150px;
@@ -25,13 +25,12 @@ div {
 	grid-area: logo;
 }
 
-.menu{
+.menu {
 	background: #F40F0F;
 	grid-area: menu;
-	grid-column-start: 2/4;
 }
 
-.news_feed{
+.news_feed {
 	background: #AC4C4C;
 	grid-area: news_feed;
 }
@@ -49,5 +48,4 @@ div {
 .footer {
 	background: #F0BE2E;
 	grid-area: footer;
-	height: 150px;
 }
