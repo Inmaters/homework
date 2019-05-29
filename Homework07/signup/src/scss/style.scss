@@ -1,0 +1,81 @@
+@import 'mixin.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #F6F6F6;
+    justify-content: center;
+    .conteiner {
+        box-shadow: 0 0 10px 10px grey;
+        height: 520px;
+        width: 400px;
+        background-color: white;
+        margin: 20px auto;
+        border-radius: 2%;
+        .field {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 20px 20px;
+            height: 480px;
+            background-color: white;
+            .forname {
+                display: flex;
+                justify-content: space-between;
+                #firstname {
+                    @include for_input;
+                    width: 48%;
+                }
+                #lastname {
+                    @include for_input;
+                    width: 48%;
+                }
+            }
+            #username {
+                @include for_input;
+            }
+            #emailaddress {
+                @include for_input;
+            }
+            #forpassword {
+                @include for_input;
+            }
+            .forcheck {
+                display: flex;
+                .agree {
+                    margin-left: 5px;
+                }
+            }
+            button {
+                width: 95px;
+                height: 45px;
+                border-radius: 5%;
+                background-color: #FDA05D;
+                margin: 0 auto;
+                border: 2px solid #FDA05D;
+                color: white;
+                cursor: pointer;
+            }
+            .footer {
+                text-align: center;
+            }
+            p {
+                color: #DEDEDE;
+                font-size: 13px;
+            }
+            a {
+                text-decoration: none;
+                color: #9A9A9A;
+            }
+        }
+    }
+}
+
+
+
+

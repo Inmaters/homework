@@ -8,7 +8,7 @@ var browserSync = require('browser-sync').create();
 
 const scssFiles = [
 	'./src/scss/style.scss',
-	'./src/scss/mixins.scss'
+	'./src/scss/mixin.scss'
 ]
 
 gulp.task('sass', function() {
